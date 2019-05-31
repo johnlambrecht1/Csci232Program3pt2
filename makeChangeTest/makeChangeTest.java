@@ -14,15 +14,23 @@ class makeChangeTest {
         test.add(5);
         test.add(1);
         test.add(1);
-        assertEquals(test, makeChange.makeChange(42));
+        assertEquals(test, makeChange.makeChange("42"));
     }
     @Test
     void test10(){
         ArrayList<Integer> test = new ArrayList<>();
         test.add(10);
-        assertEquals(test, makeChange.makeChange(10));
+        assertEquals(test, makeChange.makeChange("10"));
     }
-    negative
-    string
-            
+    @Test
+    void negative(){
+        ArrayList<Integer> test = new ArrayList<>();
+        assertEquals(test, makeChange.makeChange("-1"));
+    }
+    @Test
+    void string(){
+        ArrayList<Integer> test = new ArrayList<>();
+        assertEquals(test, makeChange.makeChange("String"));
+    }
+
 }
